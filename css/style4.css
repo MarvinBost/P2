@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #151515;
+  font-family: Montserrat;
+  color: #151515;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 567px) {
+  .container {
+    max-width: 567px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+main {
+  background-color: #f3f3f3;
+  width: 100%;
+}
+main > header {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+aside {
+  background-color: #4CAF50;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+aside > img {
+  border-radius: 50%;
+  width: 50%;
+  border: 0.1rem solid #151515;
+  order: 0;
+  margin: 1rem;
+}
+aside > section {
+  background-color: #151515;
+  color: #4CAF50;
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style4.css.map */
