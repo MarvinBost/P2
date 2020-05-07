@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+@mixin theme($name, $color) {
+
+    .#{$name} {
+        color: $color;
+    }
+
+    .bg-#{$name} {
+        background-color: $color;
+    }
+}
+
+$primary : #4CAF50;
+$dark : #151515;
+
+$themes: (primary: #4CAF50,
+    secondary: rgb(40, 100, 42),
+    light: #f3f3f3,
+    dark: #151515,
+    info: #3498db,
+    success: #2ecc71,
+    warning: #f1c40f,
+    danger: #e74c3c);
+
+@each $theme,
+$color in $themes {
+    @include theme($theme, $color);
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sections {
+    padding: 2rem 0 2rem 0;
+}
+
+.reviews {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem 0 2rem 4rem;
+
+    .review {
+
+        width: 50%;
+    }
+}
+
+.timeline {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2rem;
+
+    .desc>p:nth-child(3) {
+        width: 80%;
+        font-size: 0.85rem;
+    }
+
+    .desc>p,
+    .desc>h3 {
+        padding: 0.25rem 0 0.25rem 0;
+    }
+}
+
+.band {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date {
+    display: flex;
+    margin-left: 4rem;
+    width: 50%;
+
+    p {
+        padding-left: 1rem;
+    }
+}
+
+div.infos {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .elements {
+        padding: 0.75rem 3rem 0.75rem 3rem;
+    }
+
+    .para {
+        padding-bottom: 10rem;
+    }
+}
+
+.loisirs {
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.elements {
+    align-content: space-around;
+}
+
+.sidebar {
+    width: 15%;
+    background-color: $primary;
+}
+
+.body {
+    width: 80%;
+    height: 100%;
+
+    h1 {
+        padding-top: 4rem;
+        padding-left: 4rem;
+        font-size: 3rem;
+    }
+
+    h1::before {
+        content: "MARVIN";
+        color: $primary;
+    }
+
+    .header>h3,
+    .title>h3 {
+        padding-left: 4rem;
+
+        hr {
+            width: 5%;
+            border-color: $primary;
+        }
+    }
+
+    .title {
+        height: 13rem;
+    }
+
+    .header>h3 {
+        font-size: 1.5rem;
+    }
+
+    .header>h3>span>i {
+        padding-right: 1rem;
+    }
+
+    .header>hr {
+        margin-top: 1rem;
+        border-color: $primary;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar>img {
+    border-radius: 50%;
+    margin: 2rem;
+    width: 150px;
+    border: 2px solid red;
+}
+
+// @media only screen and (min-width: 1930px) {
+//     .sidebar {
+//         width: 10%;
+
+//         .infos .elements {
+//             font-size: 1rem;
+//             padding: 0.5rem;
+//         }
+
+//         .avatar>img {
+//             width: 100px;
+//         }
+//     }
+// }
+
+// @media only screen and (max-width: 1024px) {
+
+//     /* tablettes et ordinateurs */
+//     .sidebar {
+//         .infos .elements {
+//             font-size: 0.8rem;
+//             padding: 0.5rem;
+//         }
+
+//         .avatar>img {
+//             width: 100px;
+//         }
+//     }
+
+// }
+
+@media only screen and (max-width: 767px) {
+
+    /* smartphone */
+    .sidebar {
+        width: 100%;
+    }
+
+    .body {
+        width: 100%;
+
+        .header>h3 {
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .title>h1,
+        .title>h3 {
+            padding-left: 1rem;
+        }
+    }
+
+    .timeline {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .date {
+            margin: 0;
+            padding: 1rem 0 1rem 0;
+        }
+
+        .desc {
+            margin: 0 3rem 0 3rem;
+        }
+
+        .desc>p {
+            padding: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .desc>p:nth-child(3) {
+            width: 100%;
+            font-size: 0.85rem;
+        }
+    }
+
+    .reviews {
+        flex-direction: column;
+
+        .review {
+            padding: 2rem 0 2rem 0;
+            width: 100%;
+        }
+    }
+
+    .avatar {
+        margin: 0 auto 0 auto;
+    }
+}
