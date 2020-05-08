@@ -48,6 +48,13 @@ main > header {
   flex-flow: column nowrap;
   width: 100%;
 }
+main > header > h1::before {
+  content: "Marvin ";
+  color: #4CAF50;
+}
+main > header > h3::before {
+  text-decoration: underline;
+}
 
 aside {
   background-color: #4CAF50;

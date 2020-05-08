@@ -54,6 +54,15 @@ main {
         display: flex;
         flex-flow: column nowrap;
         width: 100%;
+
+        >h1::before {
+            content: "Marvin ";
+            color: $primary;
+        }
+
+        >h3::before {
+            text-decoration: underline;
+        }
     }
 }
 
