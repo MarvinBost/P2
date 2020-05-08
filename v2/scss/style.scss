@@ -27,8 +27,57 @@ body {
     height: 100%;
 }
 
-div {
+div.main {
     display: flex;
+
+    @include mediaminwidth(320px) {
+        flex-flow: column wrap;
+
+        >aside {
+            order: 2;
+        }
+
+        >main {
+            order: 1;
+        }
+    }
+
+    @include mediaminwidth(768px) {
+        flex-flow: column wrap;
+
+        >aside {
+            order: 2;
+        }
+
+        >main {
+            order: 1;
+        }
+
+    }
+
+    @include mediaminwidth(992px) {
+        flex-flow: column wrap;
+
+        >aside {
+            order: 2;
+        }
+
+        >main {
+            order: 1;
+        }
+    }
+
+    @include mediaminwidth(1000px) {
+        flex-flow: row nowrap;
+
+        >aside {
+            order: 1;
+        }
+
+        >main {
+            order: 2;
+        }
+    }
 }
 
 .container {
@@ -38,8 +87,9 @@ div {
     margin-right: auto;
     margin-left: auto;
 
-    @include mediaminwidth(567px) {
-        max-width: 567px;
+    @include mediaminwidth(320px) {
+        max-width: 320px;
+        padding: 0;
     }
 
     @include mediaminwidth(768px) {
@@ -50,7 +100,8 @@ div {
         max-width: 992px;
     }
 
-    @include mediaminwidth(1200px) {
-        max-width: 1200px;
+    @include mediaminwidth(1024px) {
+        max-width: 1024px;
+
     }
 }

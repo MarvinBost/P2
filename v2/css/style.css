@@ -5,6 +5,29 @@ header {
   margin: 0;
   width: 100%;
 }
+@media screen and (min-width: 320px) {
+  header {
+    flex-flow: column wrap;
+  }
+  header > section {
+    padding: 0 1rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    flex-flow: column wrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    flex-flow: column wrap;
+  }
+}
+@media screen and (min-width: 1000px) {
+  header {
+    flex-flow: row wrap;
+  }
+}
 header aside {
   display: flex;
   align-items: center;
@@ -49,6 +72,27 @@ main {
   padding: 0 4rem;
   margin: 0;
   width: 100%;
+}
+@media screen and (min-width: 320px) {
+  main {
+    width: auto;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  main {
+    width: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  main {
+    width: auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  main {
+    width: 100%;
+  }
 }
 main > header {
   display: flex;
@@ -123,6 +167,46 @@ aside {
   min-width: 300px;
   max-width: 300px;
 }
+@media screen and (min-width: 320px) {
+  aside {
+    max-width: 320px;
+    min-width: 320px;
+  }
+}
+@media screen and (min-width: 768px) {
+  aside {
+    max-width: 768px;
+    min-width: 768px;
+  }
+}
+@media screen and (min-width: 992px) {
+  aside {
+    max-width: 992px;
+    min-width: 992px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  aside {
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+aside section.about {
+  flex-grow: 1;
+}
+aside > section > article {
+  padding: 0;
+}
+aside div > picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid #151515;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+}
 aside > section {
   width: 100%;
   text-align: left;
@@ -146,24 +230,6 @@ aside > section div {
   display: flex;
 }
 
-footer {
-  display: flex;
-  flex: 100%;
-}
-footer > aside > section > article {
-  padding: 0;
-}
-footer div > picture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid #151515;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  padding: 5px;
-}
-
 html,
 body {
   margin: 0;
@@ -177,8 +243,52 @@ body {
   height: 100%;
 }
 
-div {
+div.main {
   display: flex;
+}
+@media screen and (min-width: 320px) {
+  div.main {
+    flex-flow: column wrap;
+  }
+  div.main > aside {
+    order: 2;
+  }
+  div.main > main {
+    order: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  div.main {
+    flex-flow: column wrap;
+  }
+  div.main > aside {
+    order: 2;
+  }
+  div.main > main {
+    order: 1;
+  }
+}
+@media screen and (min-width: 992px) {
+  div.main {
+    flex-flow: column wrap;
+  }
+  div.main > aside {
+    order: 2;
+  }
+  div.main > main {
+    order: 1;
+  }
+}
+@media screen and (min-width: 1000px) {
+  div.main {
+    flex-flow: row nowrap;
+  }
+  div.main > aside {
+    order: 1;
+  }
+  div.main > main {
+    order: 2;
+  }
 }
 
 .container {
@@ -188,9 +298,10 @@ div {
   margin-right: auto;
   margin-left: auto;
 }
-@media screen and (min-width: 567px) {
+@media screen and (min-width: 320px) {
   .container {
-    max-width: 567px;
+    max-width: 320px;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -203,9 +314,9 @@ div {
     max-width: 992px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .container {
-    max-width: 1200px;
+    max-width: 1024px;
   }
 }
 

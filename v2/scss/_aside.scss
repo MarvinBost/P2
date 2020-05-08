@@ -6,6 +6,48 @@ aside {
     min-width: 300px;
     max-width: 300px;
 
+    @include mediaminwidth(320px) {
+        max-width: 320px;
+        min-width: 320px;
+    }
+
+    @include mediaminwidth(768px) {
+        max-width: 768px;
+        min-width: 768px;
+
+    }
+
+    @include mediaminwidth(992px) {
+        max-width: 992px;
+        min-width: 992px;
+    }
+
+    @include mediaminwidth(1000px) {
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    section.about {
+        flex-grow: 1;
+    }
+
+    >section>article {
+        padding: 0;
+    }
+
+    div {
+        >picture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid $dark;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            padding: 5px;
+        }
+    }
+
     >section {
         width: 100%;
         text-align: left;

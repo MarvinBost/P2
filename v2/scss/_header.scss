@@ -4,6 +4,26 @@ header {
     margin: 0;
     width: 100%;
 
+    @include mediaminwidth(320px) {
+        flex-flow: column wrap;
+
+        >section {
+            padding: 0 1rem !important;
+        }
+    }
+
+    @include mediaminwidth(768px) {
+        flex-flow: column wrap;
+    }
+
+    @include mediaminwidth(992px) {
+        flex-flow: column wrap;
+    }
+
+    @include mediaminwidth(1000px) {
+        flex-flow: row wrap;
+    }
+
     aside {
         display: flex;
         align-items: center;
