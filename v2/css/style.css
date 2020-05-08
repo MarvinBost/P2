@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap");
 header {
   display: flex;
-  flex: 100%;
   background-color: #f3f3f3;
   margin: 0;
+  width: 100%;
 }
 header aside {
   display: flex;
@@ -168,7 +168,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #f3f3f3;
+  background-color: #151515;
   font-family: Montserrat;
   color: #151515;
   display: flex;
@@ -209,4 +209,4 @@ div {
   }
 }
 
-/*# sourceMappingURL=style4.css.map */
+/*# sourceMappingURL=style.css.map */

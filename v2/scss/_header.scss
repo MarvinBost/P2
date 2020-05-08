@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    background-color: $light;
+    margin: 0;
+    width: 100%;
+
+    aside {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+
+        >img {
+            border-radius: 50%;
+            width: 50%;
+            border: 0.1rem solid $dark;
+            order: 0;
+            margin: 1rem;
+        }
+    }
+
+    >section {
+        padding: 4rem 0 0 4rem;
+
+        >h1 {
+            font-size: 3rem;
+            font-weight: 400;
+        }
+
+        >h1::before {
+            content: "Marvin";
+            color: $primary;
+        }
+
+        >h3 {
+            position: relative;
+            bottom: 50px;
+        }
+
+        >h3::before {
+            display: block;
+            content: '';
+            width: 1.5rem;
+            height: 1px;
+            background: $primary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}

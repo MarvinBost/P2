@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    flex: 100%;
+
+    >aside>section>article {
+        padding: 0;
+    }
+
+    div {
+
+
+        >picture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid $dark;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            padding: 5px;
+        }
+    }
+}

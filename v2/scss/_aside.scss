@@ -1,0 +1,35 @@
+aside {
+    background-color: $primary;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    min-width: 300px;
+    max-width: 300px;
+
+    >section {
+        width: 100%;
+        text-align: left;
+
+        article {
+            padding: 1rem 2rem;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        >section {
+            background-color: $dark;
+            color: $primary;
+            width: 100%;
+            text-align: center;
+            padding: 1px;
+        }
+
+        div {
+            justify-content: space-around;
+            padding: 0.75rem;
+            display: flex;
+        }
+    }
+}

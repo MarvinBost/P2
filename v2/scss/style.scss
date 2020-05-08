@@ -1,0 +1,56 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap');
+//Colors
+$primary : #4CAF50;
+$secondary: rgb(40, 100, 42);
+$dark : #151515;
+$light : #f3f3f3;
+
+//imports
+@import 'mixins';
+@import 'header';
+@import 'main';
+@import 'aside';
+@import 'footer';
+
+//style
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $dark;
+    font-family: Montserrat;
+    color: $dark;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+}
+
+div {
+    display: flex;
+}
+
+.container {
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mediaminwidth(567px) {
+        max-width: 567px;
+    }
+
+    @include mediaminwidth(768px) {
+        max-width: 768px;
+    }
+
+    @include mediaminwidth(992px) {
+        max-width: 992px;
+    }
+
+    @include mediaminwidth(1200px) {
+        max-width: 1200px;
+    }
+}
