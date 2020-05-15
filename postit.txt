@@ -1,5 +1,5 @@
-supprimer lorem
-loisirs en bas
-Nom en dessous de la photo
-balise sementique
+supprimer lorem :check
+loisirs en bas :check
+Nom en dessous de la photo :check
+balise sementique :check
 commentaire

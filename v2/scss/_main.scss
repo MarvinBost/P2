@@ -1,28 +1,8 @@
 main {
     background-color: $light;
-    // width: 100%;
     padding: 0 4rem;
     margin: 0;
     width: 100%;
-
-    @include mediaminwidth(320px) {
-        width: auto;
-        padding: 0;
-    }
-
-    @include mediaminwidth(768px) {
-        width: auto;
-    }
-
-    @include mediaminwidth(992px) {
-        width: auto;
-    }
-
-    @include mediaminwidth(1000px) {
-        width: 100%;
-    }
-
-
 
     >header {
         display: flex;

@@ -5,29 +5,6 @@ header {
   margin: 0;
   width: 100%;
 }
-@media screen and (min-width: 320px) {
-  header {
-    flex-flow: column wrap;
-  }
-  header > section {
-    padding: 0 1rem !important;
-  }
-}
-@media screen and (min-width: 768px) {
-  header {
-    flex-flow: column wrap;
-  }
-}
-@media screen and (min-width: 992px) {
-  header {
-    flex-flow: column wrap;
-  }
-}
-@media screen and (min-width: 1000px) {
-  header {
-    flex-flow: row wrap;
-  }
-}
 header aside {
   display: flex;
   align-items: center;
@@ -72,27 +49,6 @@ main {
   padding: 0 4rem;
   margin: 0;
   width: 100%;
-}
-@media screen and (min-width: 320px) {
-  main {
-    width: auto;
-    padding: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  main {
-    width: auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  main {
-    width: auto;
-  }
-}
-@media screen and (min-width: 1000px) {
-  main {
-    width: 100%;
-  }
 }
 main > header {
   display: flex;
@@ -167,30 +123,6 @@ aside {
   min-width: 300px;
   max-width: 300px;
 }
-@media screen and (min-width: 320px) {
-  aside {
-    max-width: 320px;
-    min-width: 320px;
-  }
-}
-@media screen and (min-width: 768px) {
-  aside {
-    max-width: 768px;
-    min-width: 768px;
-  }
-}
-@media screen and (min-width: 992px) {
-  aside {
-    max-width: 992px;
-    min-width: 992px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  aside {
-    min-width: 300px;
-    max-width: 300px;
-  }
-}
 aside section.about {
   flex-grow: 1;
 }
@@ -217,6 +149,10 @@ aside > section article {
 aside > section article p {
   margin: 0;
 }
+aside > section article p a {
+  text-decoration: none;
+  color: #151515;
+}
 aside > section > section {
   background-color: #151515;
   color: #4CAF50;
@@ -234,7 +170,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #151515;
   font-family: Montserrat;
   color: #151515;
   display: flex;
@@ -245,78 +180,61 @@ body {
 
 div.main {
   display: flex;
-}
-@media screen and (min-width: 320px) {
-  div.main {
-    flex-flow: column wrap;
-  }
-  div.main > aside {
-    order: 2;
-  }
-  div.main > main {
-    order: 1;
-  }
-}
-@media screen and (min-width: 768px) {
-  div.main {
-    flex-flow: column wrap;
-  }
-  div.main > aside {
-    order: 2;
-  }
-  div.main > main {
-    order: 1;
-  }
-}
-@media screen and (min-width: 992px) {
-  div.main {
-    flex-flow: column wrap;
-  }
-  div.main > aside {
-    order: 2;
-  }
-  div.main > main {
-    order: 1;
-  }
-}
-@media screen and (min-width: 1000px) {
-  div.main {
-    flex-flow: row nowrap;
-  }
-  div.main > aside {
-    order: 1;
-  }
-  div.main > main {
-    order: 2;
-  }
+  width: 100%;
 }
 
-.container {
-  max-width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+@media screen and (max-width: 900px) {
+  main > section > article {
+    flex-flow: column wrap;
+  }
+  main > section > article > header {
+    flex-flow: column wrap;
+    text-align: center;
+    padding: 0 0 0.5rem 0;
+  }
+  main > section > article > header > i {
+    padding: 0.5rem 0;
+  }
+  main > section > article > section {
+    text-align: center;
+  }
+
+  main > section.recommendation > section {
+    flex-flow: column wrap;
+    text-align: center;
+  }
 }
-@media screen and (min-width: 320px) {
-  .container {
-    max-width: 320px;
+@media screen and (max-width: 760px) {
+  header {
+    flex-flow: column wrap;
+  }
+  header > aside {
+    order: 0;
+  }
+  header > section {
+    padding: 0 1rem;
+  }
+
+  aside {
+    min-width: 100%;
+    order: 2;
+  }
+
+  div.main {
+    flex-flow: column wrap;
+  }
+
+  main {
     padding: 0;
   }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
+  main > section > header {
+    flex-flow: column wrap;
   }
-}
-@media screen and (min-width: 992px) {
-  .container {
-    max-width: 992px;
+  main > section > header > hr {
+    width: 80%;
   }
-}
-@media screen and (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
+  main > section > article > section > p {
+    padding: 0 1rem;
   }
 }
 

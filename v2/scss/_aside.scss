@@ -6,27 +6,6 @@ aside {
     min-width: 300px;
     max-width: 300px;
 
-    @include mediaminwidth(320px) {
-        max-width: 320px;
-        min-width: 320px;
-    }
-
-    @include mediaminwidth(768px) {
-        max-width: 768px;
-        min-width: 768px;
-
-    }
-
-    @include mediaminwidth(992px) {
-        max-width: 992px;
-        min-width: 992px;
-    }
-
-    @include mediaminwidth(1000px) {
-        min-width: 300px;
-        max-width: 300px;
-    }
-
     section.about {
         flex-grow: 1;
     }
@@ -57,6 +36,11 @@ aside {
 
             p {
                 margin: 0;
+
+                a {
+                    text-decoration: none;
+                    color: $dark;
+                }
             }
         }
 

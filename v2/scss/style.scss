@@ -18,7 +18,6 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: $dark;
     font-family: Montserrat;
     color: $dark;
     display: flex;
@@ -29,79 +28,73 @@ body {
 
 div.main {
     display: flex;
+    width: 100%;
+}
 
-    @include mediaminwidth(320px) {
+@include mediamaxwidth(900px) {
+    main>section>article {
         flex-flow: column wrap;
 
-        >aside {
-            order: 2;
+        >header {
+            flex-flow: column wrap;
+            text-align: center;
+            padding: 0 0 0.5rem 0;
+
+            >i {
+                padding: 0.5rem 0;
+            }
         }
 
-        >main {
-            order: 1;
+        >section {
+            text-align: center;
         }
     }
 
-    @include mediaminwidth(768px) {
-        flex-flow: column wrap;
-
-        >aside {
-            order: 2;
-        }
-
-        >main {
-            order: 1;
-        }
-
-    }
-
-    @include mediaminwidth(992px) {
-        flex-flow: column wrap;
-
-        >aside {
-            order: 2;
-        }
-
-        >main {
-            order: 1;
-        }
-    }
-
-    @include mediaminwidth(1000px) {
-        flex-flow: row nowrap;
-
-        >aside {
-            order: 1;
-        }
-
-        >main {
-            order: 2;
+    main>section.recommendation {
+        >section {
+            flex-flow: column wrap;
+            text-align: center;
         }
     }
 }
 
-.container {
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+@include mediamaxwidth(760px) {
+    header {
+        flex-flow: column wrap;
 
-    @include mediaminwidth(320px) {
-        max-width: 320px;
+        >aside {
+            order: 0;
+        }
+
+        >section {
+            padding: 0 1rem;
+        }
+    }
+
+    aside {
+        min-width: 100%;
+        order: 2;
+    }
+
+    div.main {
+        flex-flow: column wrap;
+    }
+
+    main {
         padding: 0;
-    }
 
-    @include mediaminwidth(768px) {
-        max-width: 768px;
-    }
+        >section {
+            >header {
+                flex-flow: column wrap;
 
-    @include mediaminwidth(992px) {
-        max-width: 992px;
-    }
+                >hr {
+                    width: 80%;
+                }
+            }
 
-    @include mediaminwidth(1024px) {
-        max-width: 1024px;
-
+            >article>section>p {
+                padding: 0 1rem;
+            }
+        }
     }
 }
