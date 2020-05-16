@@ -89,6 +89,7 @@ main > section article > header {
 }
 main > section article > header > i {
   padding-right: 1rem;
+  color: #4CAF50;
 }
 main > section article > section {
   flex: 70%;
@@ -120,8 +121,8 @@ aside {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 33%;
+  max-width: 33%;
 }
 aside section.about {
   flex-grow: 1;
@@ -222,6 +223,9 @@ div.main {
 
   div.main {
     flex-flow: column wrap;
+  }
+  div.main > aside > section.contact {
+    text-align: center;
   }
 
   main {
