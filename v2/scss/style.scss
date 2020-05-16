@@ -78,6 +78,10 @@ div.main {
 
     div.main {
         flex-flow: column wrap;
+
+        >aside>section.contact {
+            text-align: center;
+        }
     }
 
     main {
