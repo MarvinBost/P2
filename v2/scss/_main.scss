@@ -26,10 +26,10 @@ main {
 
             i {
                 color: $primary;
-                flex: 10%;
+                padding-right: 1rem;
             }
 
-            >h1 {
+            >h2 {
                 flex: 90%;
             }
 
@@ -39,7 +39,7 @@ main {
             }
         }
 
-        article {
+        div {
             display: flex;
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -58,7 +58,7 @@ main {
             >section {
                 flex: 70%;
 
-                >h1 {
+                >h2 {
                     font-size: 1.5rem;
                     padding-bottom: 0.5rem;
                 }
@@ -77,7 +77,7 @@ main {
     }
 
     section.recommendation {
-        >section {
+        >div {
             display: flex;
             flex-flow: row wrap;
 
