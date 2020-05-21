@@ -1,0 +1,91 @@
+main {
+    background-color: $light;
+    padding: 0 4rem;
+    margin: 0;
+    width: 100%;
+
+    >header {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
+    >section {
+
+        h1,
+        h5,
+        p {
+            margin: 0;
+        }
+
+        >header {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            padding-bottom: 1rem;
+
+            i {
+                color: $primary;
+                padding-right: 1rem;
+            }
+
+            >h2 {
+                flex: 90%;
+            }
+
+            hr {
+                width: 100%;
+                border-color: $primary;
+            }
+        }
+
+        div {
+            display: flex;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            >header {
+                display: flex;
+                flex-flow: row nowrap;
+                flex: 30%;
+
+                >i {
+                    padding-right: 1rem;
+                    color: $primary;
+                }
+            }
+
+            >section {
+                flex: 70%;
+
+                >h2 {
+                    font-size: 1.5rem;
+                    padding-bottom: 0.5rem;
+                }
+
+                >h5 {
+                    font-size: 1rem;
+                    padding-bottom: 0.5rem;
+                }
+
+                >p {
+                    font-size: 0.9rem;
+                    padding-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+
+    section.recommendation {
+        >div {
+            display: flex;
+            flex-flow: row wrap;
+
+            >article {
+                display: flex;
+                flex-flow: column wrap;
+                flex: 50%;
+            }
+        }
+    }
+}
