@@ -31,7 +31,7 @@ div.main {
 }
 
 @include mediamaxwidth(900px) {
-    main>section>article {
+    main>section>div {
         flex-flow: column wrap;
 
         >header {
@@ -50,7 +50,7 @@ div.main {
     }
 
     main>section.recommendation {
-        >section {
+        >div {
             flex-flow: column wrap;
             text-align: center;
         }
