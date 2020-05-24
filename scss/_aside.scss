@@ -10,12 +10,8 @@ aside {
         flex-grow: 1;
     }
 
-    >section>article {
-        padding: 0;
-    }
-
-    div {
-        >picture {
+    div.icons {
+        >p {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -31,9 +27,11 @@ aside {
         width: 100%;
         text-align: left;
 
-        article {
+        article,
+        div.body {
             padding: 1rem 2rem;
 
+            h4,
             p {
                 margin: 0;
 
@@ -44,15 +42,17 @@ aside {
             }
         }
 
-        >section {
+        >section,
+        header {
             background-color: $dark;
             color: $primary;
             width: 100%;
             text-align: center;
             padding: 1px;
+            display: block;
         }
 
-        div {
+        div.icons {
             justify-content: space-around;
             padding: 0.75rem;
             display: flex;
