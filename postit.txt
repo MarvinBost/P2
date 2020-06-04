@@ -2,5 +2,5 @@ supprimer lorem :check
 loisirs en bas :check
 Nom en dessous de la photo :check
 balise sementique :check
-validation W3C
+validation W3C :check
 commentaire
