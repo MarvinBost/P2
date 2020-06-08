@@ -27,7 +27,7 @@ aside {
         width: 100%;
         text-align: left;
 
-        article,
+        section,
         div.body {
             padding: 1rem 2rem;
 
@@ -42,8 +42,7 @@ aside {
             }
         }
 
-        >section,
-        header {
+        >header {
             background-color: $dark;
             color: $primary;
             width: 100%;
