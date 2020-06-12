@@ -25,13 +25,13 @@ body {
     height: 100%;
 }
 
-div.main {
+main {
     display: flex;
     width: 100%;
 }
 
 @include mediamaxwidth(900px) {
-    main>section>div {
+    div.content>section>div {
         flex-flow: column wrap;
 
         >header {
@@ -49,7 +49,7 @@ div.main {
         }
     }
 
-    main>section.recommendation {
+    div.content>section.recommendation {
         >div {
             flex-flow: column wrap;
             text-align: center;
@@ -75,7 +75,7 @@ div.main {
         order: 2;
     }
 
-    div.main {
+    main {
         flex-flow: column wrap;
 
         >aside>section.contact {
@@ -83,7 +83,7 @@ div.main {
         }
     }
 
-    main {
+    div.content {
         padding: 0;
 
         >section {
